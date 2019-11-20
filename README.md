@@ -14,6 +14,12 @@ This assumes you're using Github Pages, set up to run in the /docs folder:
 
 [https://dannguyen.github.io/danssphinx-template](https://dannguyen.github.io/danssphinx-template)
 
+To build and deploy locally:
+
+```sh
+$ ./bake
+```
+
 
 ### When it's a subdirectory
 
@@ -37,6 +43,9 @@ rsync -ac _build/html/ ../docs
 ```
 $ pip install sphinx_rtd_theme
 ```
+
+https://github.com/mgaitan/sublime-rst-completion#simple-table
+
 
 
 ## Good links
