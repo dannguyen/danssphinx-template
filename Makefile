@@ -6,10 +6,26 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 SOURCEDIR     = .
 BUILDDIR      = _build
+#   if this sphinx template is in a subdirectory, change the prior line to:
+#	rsync -ac _build/html/ ../docs
+DOCSDIR		  = ./docs
+
+
+.DEFAULT_GOAL := site
+
 
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+
+site: html singlehtml
+
+	@echo '...rsyncing all contents of docs/html to docs (for Github pages)'
+
+	rsync -ac _build/html/ $(DOCSDIR)
+	rsync -ac _build/singlehtml $(DOCSDIR)
+
 
 .PHONY: help Makefile
 
@@ -20,7 +36,3 @@ help:
 #	rm -rf docs/_* docs/html
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	@echo '...rsyncing all contents of docs/html to docs (for Github pages)'
-
-	rsync -ac _build/html/ ./docs
-#   if this sphinx template is in a subdirectory, change the prior line to:
-#	rsync -ac _build/html/ ../docs

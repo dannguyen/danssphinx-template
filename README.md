@@ -7,7 +7,7 @@ This is a bunch of examples of things I forget how to do in Sphinx.
 To build the site in /docs folder:
 
 ```sh
-$ make html
+$ make site
 ```
 
 This assumes you're using Github Pages, set up to run in the /docs folder:
