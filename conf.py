@@ -20,13 +20,13 @@
 # -- Project information -----------------------------------------------------
 
 project = 'DansSphinxTemplate Notes'
-copyright = '2019, Dan Nguyen, '
+copyright = '2020, Dan Nguyen'
 author = 'Dan Nguyen'
 
 # The short X.Y version
-version = ''
+version = '0.0.2'
 # The full version, including alpha/beta/rc tags
-release = '0.0.1beta'
+release = '0.0.2beta'
 
 
 # -- General configuration ---------------------------------------------------
@@ -89,7 +89,7 @@ html_theme_options = {
     'display_version': False,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': False,
-    'style_nav_header_background': 'white',
+    # 'style_nav_header_background': 'white',
     # Toc options
     'collapse_navigation': True,
     'sticky_navigation': True,

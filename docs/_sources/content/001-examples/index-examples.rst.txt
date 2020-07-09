@@ -7,4 +7,4 @@ Syntax Examples
    :maxdepth: 3
    :caption: Contents:
 
-   /content/001-examples/000-tables
+   /content/001-examples/010-tables

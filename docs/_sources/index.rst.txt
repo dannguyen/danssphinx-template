@@ -1,6 +1,7 @@
 
+******************************************
 Dan's Sphinx Template [DansSphinxTemplate]
-==========================================
+******************************************
 
 Because the sphinx-quickstart util is sometimes not specific enough for my needs.
 
@@ -19,3 +20,11 @@ Full table of contents
 
    /content/000-hello-world/index-hello-world
    /content/001-examples/index-examples
+   /content/002-styleguide/index-styleguide
+
+More stuff:
+
+.. toctree::
+    :maxdepth: 2
+
+    /content/references/index-references
