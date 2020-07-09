@@ -11,7 +11,7 @@ This is a bunch of examples of things I forget how to do.
 Second header
 =============
 
-Put images and other assets related to a chapter directory inside the chapter directory, e.g. ``content/000-hello-world/images/hello.jpg``
+Put images and other assets related to a chapter directory inside the chapter directory, e.g. :file:`content/000-hello-world/images/hello.jpg`
 
 
 .. image:: /content/000-hello-world/images/hello.jpg
