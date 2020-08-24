@@ -8,8 +8,8 @@ SOURCEDIR     = .
 BUILDDIR      = _build
 #   if this sphinx template is in a subdirectory, change the prior line to:
 #	rsync -ac _build/html/ ../docs
-DOCSDIR		  = ./docs
-
+PUBLISH_SITE_DIR		  = ./docs
+PUBLISH_DOCS_DIR 		  = ../docs
 
 .DEFAULT_GOAL := site
 
@@ -19,12 +19,31 @@ help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 
+
 site: html singlehtml
 
 	@echo '...rsyncing all contents of docs/html to docs (for Github pages)'
 
-	rsync -ac _build/html/ $(DOCSDIR)
-	rsync -ac _build/singlehtml $(DOCSDIR)
+	rsync -ac $(BUILDDIR)/html/ $(PUBLISH_SITE_DIR)
+	rsync -ac $(BUILDDIR)/singlehtml $(PUBLISH_SITE_DIR)
+
+
+docs: html singlehtml
+
+	@echo '...rsyncing all contents of docs/html to ../docs (for subdir of a repo project)'
+
+	rsync -ac $(BUILDDIR)/html/ $(PUBLISH_DOCS_DIR)
+	rsync -ac $(BUILDDIR)/singlehtml $(PUBLISH_DOCS_DIR)
+
+# bake_site:
+# 	make $(PUBLISH_SITE_DIR) && cd $(PUBLISH_SITE_DIR) && python -m http.server 4567 --bind 127.0.0.1 && sleep 2 && \
+# 	open http://127.0.0.1:4567
+
+# bake_docs:
+# 	make $(PUBLISH_DOCS_DIR) && cd $(PUBLISH_DOCS_DIR) && python -m http.server 4567 --bind 127.0.0.1 && sleep 2 && \
+# 	open http://127.0.0.1:4567
+
+
 
 
 .PHONY: help Makefile

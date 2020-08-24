@@ -1,7 +1,27 @@
 #!/bin/sh
+if [ "$1" == "docs" ]; then
+    make docs
+    targetdir="../docs"
+else
+    make site
+    targetdir="./docs"
+fi
 
-make site && open http://127.0.0.1:4567
 
-cd docs \
-    && python -m http.server 4567 --bind 127.0.0.1
+cd "${targetdir}"
+python -m http.server 4567 --bind 127.0.0.1 &
+webpid="$!"
+open 'http://127.0.0.1:4567'
 
+clean_up() {
+    echo ''
+    echo Closing web server with process ${webpid}
+    kill ${webpid}
+    echo '-30-'
+    exit
+
+}
+
+
+trap clean_up SIGHUP SIGINT SIGTERM
+wait

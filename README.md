@@ -2,7 +2,27 @@
 
 This is a bunch of examples of things I forget how to do in Sphinx. 
 
+## Installing it
+
+
+For use in a project:
+
+```sh
+$ git clone https://dannguyen.github.io/danssphinx-template _sphinxdocs
+```
+
+For development:
+
+```sh
+$ git clone https://dannguyen.github.io/danssphinx-template
+```
+
 ## Using it
+
+
+### As the repo itself
+
+Assuming the docs *are* the Github repo, in order to publish to Github Pages with `./docs` as the source of Github Pages, i.e. building the site in `./docs`
 
 To build the site in /docs folder:
 
@@ -10,41 +30,38 @@ To build the site in /docs folder:
 $ make site
 ```
 
-This assumes you're using Github Pages, set up to run in the /docs folder:
+This assumes you're using Github Pages, set up to run in the `./docs` folder:
 
 [https://dannguyen.github.io/danssphinx-template](https://dannguyen.github.io/danssphinx-template)
 
-To build and deploy locally:
+
+
+### As a subdirectory to an existing project
+
+When this is a subdirectory of another repo, i.e. used to generate the Github pages for a project, e.g. `myrepo/_sphinxdocs`, and we want to target `myrepo/docs`, then run:
+
 
 ```sh
-$ ./bake
+$ make docs
 ```
 
 
-### When it's a subdirectory
+### bake helper
 
-When this is a subdirectory of another repo, i.e. used to generate the Github pages for a project:
+Run the `./bake` helper to make either `site` or `docs` and generate a webserver:
 
-In the [Makefile](https://dannguyen.github.io/danssphinx-template), change:
-
-```Makefile
-rsync -ac _build/html/ ./docs
+```sh
+$ ./bake site
+# or 
+$ ./bake docs
 ```
 
-To:
-
-```Makefile
-rsync -ac _build/html/ ../docs
-```
 
 
 ## Dependencies and plugins
 
-```
-$ pip install sphinx_rtd_theme
-```
-
-https://github.com/mgaitan/sublime-rst-completion#simple-table
+- sphinx_rtd_theme
+- Sublime simple-table RST completer: https://github.com/mgaitan/sublime-rst-completion#simple-table
 
 
 
