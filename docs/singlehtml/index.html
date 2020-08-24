@@ -89,11 +89,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-content/002-styleguide/index-styleguide">Styleguide and conventions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/002-styleguide/roles">Commonly used roles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/002-styleguide/file-naming">File and directory naming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/002-styleguide/content-structure">File and directory naming</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="index.html#content">Content</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/002-styleguide/roles">Commonly used roles</a></li>
 </ul>
 </li>
 </ul>
@@ -330,6 +330,41 @@ bar      then do cmd-shift-t, enter</p>
 <span id="document-content/002-styleguide/index-styleguide"></span><div class="section" id="styleguide-and-conventions">
 <h3>Styleguide and conventions<a class="headerlink" href="#styleguide-and-conventions" title="Permalink to this headline">¶</a></h3>
 <div class="toctree-wrapper compound">
+<span id="document-content/002-styleguide/content-structure"></span><div class="section" id="file-and-directory-naming">
+<h4>File and directory naming<a class="headerlink" href="#file-and-directory-naming" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="content">
+<h5>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h5>
+<p>Main content goes into the <code class="docutils literal notranslate"><span class="pre">./content</span></code> directory.</p>
+<p>Think of each content subdirectory as a <strong>chapter</strong></p>
+<p>Each chapter should have its own subdirectory in <code class="docutils literal notranslate"><span class="pre">./content</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">content/000-hello-world/</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── Makefile
+├── README.md
+├── _build/
+├── _static/
+├── bake
+├── conf.py
+├── content/
+│   ├── 000-hello-world/
+│   ├── 001-examples/
+│   ├── 002-styleguide
+│
+├── index.rst
+├── make.bat
+└── requirements.txt
+</pre></div>
+</div>
+<div class="section" id="assets-subdirectories">
+<h6>Assets subdirectories<a class="headerlink" href="#assets-subdirectories" title="Permalink to this headline">¶</a></h6>
+<p>Each “chapter” subdirectory should be thought of as self-contained. So assets, like images and code files, should be subdirectories and referred to with relative paths, e.g. <code class="docutils literal notranslate"><span class="pre">content/000-hello-world/images</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── content/
+    ├── 000-hello-world/
+        ├── images/
+        └── stuff/
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <span id="document-content/002-styleguide/roles"></span><div class="section" id="commonly-used-roles">
 <h4>Commonly used roles<a class="headerlink" href="#commonly-used-roles" title="Permalink to this headline">¶</a></h4>
 <dl class="field-list simple">
@@ -362,15 +397,6 @@ bar      then do cmd-shift-t, enter</p>
 </div>
 <p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-regexp">https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-regexp</a></p>
 <p>The pattern <code class="regexp docutils literal notranslate"><span class="pre">d{4}</span></code> matches exactly 4 digits</p>
-</div>
-<span id="document-content/002-styleguide/file-naming"></span><div class="section" id="file-and-directory-naming">
-<h4>File and directory naming<a class="headerlink" href="#file-and-directory-naming" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="content">
-<h5>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h5>
-<p>Main content goes into the <code class="docutils literal notranslate"><span class="pre">./content</span></code> directory</p>
-<p>Each chapter should have its own subdirectory in <code class="docutils literal notranslate"><span class="pre">./content</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">./content/002-arithmetic</span></code></p>
-<p>Each content subdirectory should have its own assets sub directories, e.g. <code class="docutils literal notranslate"><span class="pre">./content/002-arithmetic/images</span></code> and <code class="docutils literal notranslate"><span class="pre">./content/002-arithmetic/code</span></code></p>
-</div>
 </div>
 </div>
 </div>

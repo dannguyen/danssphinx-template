@@ -92,8 +92,6 @@ https://github.com/mgaitan/sublime-rst-completion#simple-table
 
 
 
-
-
 References
 ==========
 
