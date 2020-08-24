@@ -8,13 +8,13 @@ This is a bunch of examples of things I forget how to do in Sphinx.
 For use in a project:
 
 ```sh
-$ git clone https://dannguyen.github.io/danssphinx-template _sphinxdocs
+$ git clone https://github.com/dannguyen/danssphinx-template _sphinx
 ```
 
-For development:
+For development or site documentation repo:
 
 ```sh
-$ git clone https://dannguyen.github.io/danssphinx-template
+$ git clone https://github.com/dannguyen/danssphinx-template
 ```
 
 ## Using it
