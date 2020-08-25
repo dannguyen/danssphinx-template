@@ -17,16 +17,23 @@
 # sys.path.insert(0, os.path.abspath('.'))
 
 
+# -- customvars
+project_name = 'Dans Sphinx Template'
+project_slug = 'danssphinxtemplate'
+github_username = 'dannguyen'
+github_reponame = 'danssphinx-template'
+canonical_url = f'https://{github_username}.github.io/{github_reponame}'
+
 # -- Project information -----------------------------------------------------
 
-project = 'DansSphinxTemplate Notes'
-copyright = '2020, Dan Nguyen'
+project = project_name
 author = 'Dan Nguyen'
+copyright = f'2020, {author}'
 
 # The short X.Y version
 version = '0.0.2'
 # The full version, including alpha/beta/rc tags
-release = '0.0.2beta'
+release = '0.0.2'
 
 
 # -- General configuration ---------------------------------------------------
@@ -83,7 +90,7 @@ html_theme = "sphinx_rtd_theme"
 # documentation.
 #
 html_theme_options = {
-    'canonical_url': 'https://dannguyen.github.io/danssphinx-template',
+    'canonical_url': canonical_url,
 #    'analytics_id': 'UA-XXXXXXX-1',  #  Provided by Google in your dashboard
     'logo_only': False,
     'display_version': False,
@@ -118,7 +125,7 @@ html_favicon = '_static/favicon.ico'
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'DansSphinxTemplateNotesdoc'
+htmlhelp_basename = f'{project}Notesdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -145,8 +152,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'DansSphinxTemplateNotes.tex', 'DansSphinxTemplate Notes Documentation',
-     'Dan Nguyen, ', 'manual'),
+    (master_doc, f'{project}Notes.tex', 'f{project} Notes Documentation',
+     f'{author}, ', 'manual'),
 ]
 
 
@@ -155,7 +162,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'danssphinxtemplate', 'DansSphinxTemplate Notes Documentation',
+    (master_doc, f'{project_slug}template', f'{project} Notes Documentation',
      [author], 1)
 ]
 
@@ -169,8 +176,8 @@ nitpicky = True
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'DansSphinxTemplateNotes', 'DansSphinxTemplate Notes Documentation',
-     author, 'DansSphinxTemplateNotes', 'One line description of project.',
+    (master_doc, f'{project}Notes', f'{project} Notes Documentation',
+     author, f'{project}Notes', 'One line description of project.',
      'Miscellaneous'),
 ]
 

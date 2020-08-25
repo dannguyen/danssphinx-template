@@ -3,8 +3,8 @@ Commonly used roles
 *******************
 
 
-:file:
-======
+Mark filenames with ``:file:``
+==============================
 
 For filenames, use the `:file: <https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html?highlight=%3Afile%3A#role-file>`_ directive, instead of the generic inline code directive (e.g. double tildes)
 
@@ -17,8 +17,8 @@ Look at :file:`./contents/index.rst`
 
 
 
-:kbd:
-=====
+Mark keyboard actions with ``:kbd:``
+====================================
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-kbd
 
@@ -31,8 +31,8 @@ Press :kbd:`Cmd+Tab` to switch apps quickly
 
 
 
-:regexp:
-========
+Mark regexes with ``:regexp:``
+==============================
 
 .. code-block:: rst
 
