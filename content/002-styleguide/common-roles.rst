@@ -3,6 +3,59 @@ Commonly used roles
 *******************
 
 
+``:any:`` cross-reference catch-all
+===================================
+
+
+Link to a different chapter page:
+
+Code:
+
+.. code-block:: rst
+
+    :any:`/content/001-examples/index`
+
+
+
+Rendered:
+
+    :any:`/content/001-examples/index`
+
+
+
+Intersphinx linking:
+
+
+
+Code:
+
+.. code-block:: rst
+
+    :any:`sphinx:any`
+
+Rendered (TODO: why is styling so messed up):
+
+    :any:`sphinx:any`
+
+
+
+
+.. - :ref:`sphinx:ref-role`
+.. - :ref:`:ref: role <sphinx:ref-role>`
+.. - :doc:`sphinx:usage/extensions/intersphinx`
+.. - :doc:`Intersphinx <sphinx:usage/extensions/intersphinx>`
+
+
+
+
+
+
+
+
+
+
+
+
 Mark filenames with ``:file:``
 ==============================
 

@@ -9,4 +9,4 @@ Styleguide and conventions
 
 
    /content/002-styleguide/content-structure
-   /content/002-styleguide/roles
+   /content/002-styleguide/common-roles

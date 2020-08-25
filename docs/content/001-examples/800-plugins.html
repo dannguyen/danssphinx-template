@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Syntax Examples &mdash; Dans Sphinx Template 0.0.2 documentation</title>
+  <title>Plugins and extensions &mdash; Dans Sphinx Template 0.0.2 documentation</title>
   
 
   
@@ -20,7 +20,7 @@
   
   
   
-    <link rel="canonical" href="https://dannguyen.github.io/danssphinx-templatecontent/001-examples/index-examples.html"/>
+    <link rel="canonical" href="https://dannguyen.github.io/danssphinx-templatecontent/001-examples/800-plugins.html"/>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Tables" href="010-tables.html" />
-    <link rel="prev" title="Hello world" href="../000-hello-world/index-hello-world.html" /> 
+    <link rel="next" title="Styleguide and conventions" href="../002-styleguide/index-styleguide.html" />
+    <link rel="prev" title="Images" href="200-images.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,10 +86,10 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../000-hello-world/index-hello-world.html">Hello world</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Syntax Examples</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index-examples.html">Syntax Examples</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="010-tables.html">Tables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="200-images.html">Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="800-plugins.html">Plugins and extensions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Plugins and extensions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../002-styleguide/index-styleguide.html">Styleguide and conventions</a></li>
@@ -142,13 +142,15 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Syntax Examples</li>
+          <li><a href="index-examples.html">Syntax Examples</a> &raquo;</li>
+        
+      <li>Plugins and extensions</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/content/001-examples/index-examples.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/content/001-examples/800-plugins.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -161,31 +163,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="syntax-examples">
-<h1>Syntax Examples<a class="headerlink" href="#syntax-examples" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="010-tables.html">Tables</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="010-tables.html#simple-tables">Simple tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="010-tables.html#grid-table-syntax">Grid Table Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="010-tables.html#sublime-shortcuts-for-osx">Sublime shortcuts for OSX</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="010-tables.html#grid-table-rst-completion">Grid table rst-completion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="010-tables.html#simple-table-rst-completion">Simple table rst-completion</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="010-tables.html#references">References</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="200-images.html">Images</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="200-images.html#basic-image">Basic image</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="800-plugins.html">Plugins and extensions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="800-plugins.html#intersphinx">Intersphinx</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="plugins-and-extensions">
+<h1>Plugins and extensions<a class="headerlink" href="#plugins-and-extensions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="intersphinx">
+<h2>Intersphinx<a class="headerlink" href="#intersphinx" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://docs.readthedocs.io/en/stable/guides/intersphinx.html">https://docs.readthedocs.io/en/stable/guides/intersphinx.html</a></p>
+<p>Set up <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">intersphinx_mapping</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;sphinx&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;https://www.sphinx-doc.org/en/master/&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Sample references:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- :ref:`sphinx:ref-role`
+- :ref:`:ref: role &lt;sphinx:ref-role&gt;`
+- :doc:`sphinx:usage/extensions/intersphinx`
+- :doc:`Intersphinx &lt;sphinx:usage/extensions/intersphinx&gt;`
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -197,10 +192,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="010-tables.html" class="btn btn-neutral float-right" title="Tables" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../002-styleguide/index-styleguide.html" class="btn btn-neutral float-right" title="Styleguide and conventions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../000-hello-world/index-hello-world.html" class="btn btn-neutral float-left" title="Hello world" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="200-images.html" class="btn btn-neutral float-left" title="Images" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

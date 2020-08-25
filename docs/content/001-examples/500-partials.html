@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Including code files and partial RST content &mdash; Dans Sphinx Template 0.0.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://dannguyen.github.io/danssphinx-templatecontent/001-examples/500-partials.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Plugins and extensions" href="800-plugins.html" />
+    <link rel="prev" title="Images" href="200-images.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Dans Sphinx Template
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../000-hello-world/index-hello-world.html">Hello world</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Syntax Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="010-tables.html">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200-images.html">Images</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Including code files and partial RST content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="800-plugins.html">Plugins and extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../002-styleguide/index-styleguide.html">Styleguide and conventions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references/index-references.html">References and resources</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Dans Sphinx Template</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Syntax Examples</a> &raquo;</li>
+        
+      <li>Including code files and partial RST content</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/content/001-examples/500-partials.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="including-code-files-and-partial-rst-content">
+<h1>Including code files and partial RST content<a class="headerlink" href="#including-code-files-and-partial-rst-content" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#include-for-concatenating-rst-for-rendering" id="id1"><code class="docutils literal notranslate"><span class="pre">:include:</span></code> for concatenating RST for rendering</a></p></li>
+<li><p><a class="reference internal" href="#literalinclude-for-including-file-as-code-block" id="id2"><code class="docutils literal notranslate"><span class="pre">:literalinclude:</span></code> for including file as code block</a></p>
+<ul>
+<li><p><a class="reference internal" href="#excerpt-files-for-code-blocks" id="id3">Excerpt files for code blocks</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="include-for-concatenating-rst-for-rendering">
+<h2><a class="toc-backref" href="#id1"><code class="docutils literal notranslate"><span class="pre">:include:</span></code> for concatenating RST for rendering</a><a class="headerlink" href="#include-for-concatenating-rst-for-rendering" title="Permalink to this headline">¶</a></h2>
+<p>Code:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> partials/example-inclusion.rstinc
+</pre></div>
+</div>
+<p>Rendered:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">------------30--------------------------------</span></code></div>
+<div class="line"><strong>Hello</strong>, this is that sample partial inclusion file!</div>
+<div class="line">…which you can find here: <a class="reference download internal" download="" href="../../_downloads/35829958939bec6e1947638a8a72acfb/example-inclusion.rstinc"><code class="xref download docutils literal notranslate"><span class="pre">partials/example-inclusion.rstinc</span></code></a></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">------------30--------------------------------</span></code></div>
+</div>
+</div></blockquote>
+<p>Reference: <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#include">https://docutils.sourceforge.io/docs/ref/rst/directives.html#include</a></p>
+</div>
+<div class="section" id="literalinclude-for-including-file-as-code-block">
+<h2><a class="toc-backref" href="#id2"><code class="docutils literal notranslate"><span class="pre">:literalinclude:</span></code> for including file as code block</a><a class="headerlink" href="#literalinclude-for-including-file-as-code-block" title="Permalink to this headline">¶</a></h2>
+<p>Code:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> partials/example-inclusion.rstinc
+   <span class="nc">:language:</span> rst
+</pre></div>
+</div>
+<p>Rendered:</p>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="o">|</span> <span class="s">``------------30--------------------------------``</span>
+<span class="o">|</span> <span class="gs">**Hello**</span>, this is that sample partial inclusion file!
+<span class="o">|</span> ...which you can find here: <span class="na">:download:</span><span class="nv">`partials/example-inclusion.rstinc`</span>
+<span class="o">|</span> <span class="s">``------------30--------------------------------``</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Reference: <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-literalinclude">https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-literalinclude</a></p>
+<div class="section" id="excerpt-files-for-code-blocks">
+<h3><a class="toc-backref" href="#id3">Excerpt files for code blocks</a><a class="headerlink" href="#excerpt-files-for-code-blocks" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> TODOTODO.y
+   <span class="nc">:language:</span> python
+   <span class="nc">:emphasize-lines:</span> 3,6-8
+   <span class="nc">:linenos:</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="800-plugins.html" class="btn btn-neutral float-right" title="Plugins and extensions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="200-images.html" class="btn btn-neutral float-left" title="Images" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Dan Nguyen
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

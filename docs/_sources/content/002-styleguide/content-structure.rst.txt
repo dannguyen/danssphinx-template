@@ -24,11 +24,23 @@ Each chapter should have its own subdirectory in ``./content``, e.g. ``content/0
     ├── content/
     │   ├── 000-hello-world/
     │   ├── 001-examples/
-    │   ├── 002-styleguide
-    │
+    │   └── 002-styleguide/
+    │       └── index.rst
     ├── index.rst
     ├── make.bat
     └── requirements.txt
+
+
+Chapter/section subdirectories
+==============================
+
+
+index.rst
+---------
+
+For every chapter/section, create a subdirectory, e.g. :file:`000-hello-world/` with its own :file:`index.rst`
+
+
 
 Assets subdirectories
 ---------------------
@@ -39,6 +51,9 @@ Each "chapter" subdirectory should be thought of as self-contained. So assets, l
 ::
 
     ├── content/
-        ├── 000-hello-world/
+        └── 000-hello-world/
             ├── images/
             └── stuff/
+            └── index.rst
+
+

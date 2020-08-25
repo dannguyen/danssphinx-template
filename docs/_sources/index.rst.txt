@@ -19,7 +19,7 @@ Full table of contents
    :caption: Contents:
 
    /content/000-hello-world/index-hello-world
-   /content/001-examples/index-examples
+   /content/001-examples/index
    /content/002-styleguide/index-styleguide
 
 More stuff:

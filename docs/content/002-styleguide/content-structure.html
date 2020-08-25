@@ -40,7 +40,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Commonly used roles" href="roles.html" />
+    <link rel="next" title="Commonly used roles" href="common-roles.html" />
     <link rel="prev" title="Styleguide and conventions" href="index-styleguide.html" /> 
 </head>
 
@@ -86,10 +86,10 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../000-hello-world/index-hello-world.html">Hello world</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../001-examples/index-examples.html">Syntax Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../001-examples/index.html">Syntax Examples</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index-styleguide.html">Styleguide and conventions</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">File and directory naming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="roles.html">Commonly used roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common-roles.html">Commonly used roles</a></li>
 </ul>
 </li>
 </ul>
@@ -178,20 +178,28 @@
 ├── content/
 │   ├── 000-hello-world/
 │   ├── 001-examples/
-│   ├── 002-styleguide
-│
+│   └── 002-styleguide/
+│       └── index.rst
 ├── index.rst
 ├── make.bat
 └── requirements.txt
 </pre></div>
 </div>
+</div>
+<div class="section" id="chapter-section-subdirectories">
+<h2>Chapter/section subdirectories<a class="headerlink" href="#chapter-section-subdirectories" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="index-rst">
+<h3>index.rst<a class="headerlink" href="#index-rst" title="Permalink to this headline">¶</a></h3>
+<p>For every chapter/section, create a subdirectory, e.g. <code class="file docutils literal notranslate"><span class="pre">000-hello-world/</span></code> with its own <code class="file docutils literal notranslate"><span class="pre">index.rst</span></code></p>
+</div>
 <div class="section" id="assets-subdirectories">
 <h3>Assets subdirectories<a class="headerlink" href="#assets-subdirectories" title="Permalink to this headline">¶</a></h3>
 <p>Each “chapter” subdirectory should be thought of as self-contained. So assets, like images and code files, should be subdirectories and referred to with relative paths, e.g. <code class="docutils literal notranslate"><span class="pre">content/000-hello-world/images</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── content/
-    ├── 000-hello-world/
+    └── 000-hello-world/
         ├── images/
         └── stuff/
+        └── index.rst
 </pre></div>
 </div>
 </div>
@@ -206,7 +214,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="roles.html" class="btn btn-neutral float-right" title="Commonly used roles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="common-roles.html" class="btn btn-neutral float-right" title="Commonly used roles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index-styleguide.html" class="btn btn-neutral float-left" title="Styleguide and conventions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

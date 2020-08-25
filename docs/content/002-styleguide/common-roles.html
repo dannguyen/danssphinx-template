@@ -20,7 +20,7 @@
   
   
   
-    <link rel="canonical" href="https://dannguyen.github.io/danssphinx-templatecontent/002-styleguide/roles.html"/>
+    <link rel="canonical" href="https://dannguyen.github.io/danssphinx-templatecontent/002-styleguide/common-roles.html"/>
   
 
   
@@ -86,7 +86,7 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../000-hello-world/index-hello-world.html">Hello world</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../001-examples/index-examples.html">Syntax Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../001-examples/index.html">Syntax Examples</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index-styleguide.html">Styleguide and conventions</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="content-structure.html">File and directory naming</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Commonly used roles</a></li>
@@ -149,7 +149,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/content/002-styleguide/roles.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/content/002-styleguide/common-roles.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -166,7 +166,24 @@
 <h1>Commonly used roles<a class="headerlink" href="#commonly-used-roles" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="any-cross-reference-catch-all">
 <h2><code class="docutils literal notranslate"><span class="pre">:any:</span></code> cross-reference catch-all<a class="headerlink" href="#any-cross-reference-catch-all" title="Permalink to this headline">¶</a></h2>
-<p><span class="xref std std-ref">:any: role</span></p>
+<p>Link to a different chapter page:</p>
+<p>Code:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:any:</span><span class="nv">`/content/001-examples/index`</span>
+</pre></div>
+</div>
+<p>Rendered:</p>
+<blockquote>
+<div><p><a class="reference internal" href="../001-examples/index.html"><span class="doc">Syntax Examples</span></a></p>
+</div></blockquote>
+<p>Intersphinx linking:</p>
+<p>Code:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:any:</span><span class="nv">`sphinx:any`</span>
+</pre></div>
+</div>
+<p>Rendered (TODO: why is styling so messed up):</p>
+<blockquote>
+<div><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-any" title="(in Sphinx v4.0.0+)"><code class="docutils literal notranslate"><span class="pre">any</span></code></a></p>
+</div></blockquote>
 </div>
 <div class="section" id="mark-filenames-with-file">
 <h2>Mark filenames with <code class="docutils literal notranslate"><span class="pre">:file:</span></code><a class="headerlink" href="#mark-filenames-with-file" title="Permalink to this headline">¶</a></h2>

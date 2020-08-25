@@ -24,6 +24,24 @@ github_username = 'dannguyen'
 github_reponame = 'danssphinx-template'
 canonical_url = f'https://{github_username}.github.io/{github_reponame}'
 
+
+# -- plugins/dependencies
+extensions = [
+    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.githubpages',
+    'sphinx.ext.intersphinx',
+
+]
+
+# manually have to refresh these .inv files
+intersphinx_mapping = {
+    'python': ('https://docs.python.org/3', './vendor/objects/python.inv'),
+    'sphinx': ('https://www.sphinx-doc.org/en/master/', './vendor/objects/sphinx.inv'),
+}
+html_theme = "sphinx_rtd_theme"
+needs_sphinx = '3.2'
+
+
 # -- Project information -----------------------------------------------------
 
 project = project_name
@@ -36,19 +54,6 @@ version = '0.0.2'
 release = '0.0.2'
 
 
-# -- General configuration ---------------------------------------------------
-
-# If your documentation needs a minimal Sphinx version, state it here.
-#
-# needs_sphinx = '1.0'
-
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
-extensions = [
-    'sphinx.ext.githubpages',
-    'sphinx.ext.autosectionlabel',
-]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -79,11 +84,6 @@ pygments_style = 'monokai'
 
 
 # -- Options for HTML output -------------------------------------------------
-
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
-html_theme = "sphinx_rtd_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
