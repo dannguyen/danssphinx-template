@@ -1,6 +1,7 @@
 # Minimal makefile for Sphinx documentation
 #
 
+.PHONY: help Makefile fresh
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
@@ -11,6 +12,7 @@ BUILDDIR      = _build
 PUBLISH_SITE_DIR		  = ./docs
 PUBLISH_DOCS_DIR 		  = ../docs
 
+
 .DEFAULT_GOAL := site
 
 
@@ -18,6 +20,12 @@ PUBLISH_DOCS_DIR 		  = ../docs
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
+
+fresh:
+	@echo Cleaning out content and docs dir
+	@rm -rf ./docs
+	find ./content -type d -not -path './content' -maxdepth 1 \
+	  | while read -r dname; do rm -rf $${dname}; done
 
 
 site: html singlehtml
@@ -35,18 +43,8 @@ docs: html singlehtml
 	rsync -ac $(BUILDDIR)/html/ $(PUBLISH_DOCS_DIR)
 	rsync -ac $(BUILDDIR)/singlehtml $(PUBLISH_DOCS_DIR)
 
-# bake_site:
-# 	make $(PUBLISH_SITE_DIR) && cd $(PUBLISH_SITE_DIR) && python -m http.server 4567 --bind 127.0.0.1 && sleep 2 && \
-# 	open http://127.0.0.1:4567
-
-# bake_docs:
-# 	make $(PUBLISH_DOCS_DIR) && cd $(PUBLISH_DOCS_DIR) && python -m http.server 4567 --bind 127.0.0.1 && sleep 2 && \
-# 	open http://127.0.0.1:4567
 
 
-
-
-.PHONY: help Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
