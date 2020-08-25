@@ -1,5 +1,14 @@
 # TODOS
 
+## Priority
+
+- [ ] Add/learn some more roles
+
+
+## Config
+
+- How do I get "Edit Github Pages" to show up?
+
 ## Style/Convention
 
 Should chapter indexes be referred to as `chapter-index.rst`, instead of just `index.rst`?
@@ -21,13 +30,12 @@ Should chapter indexes be referred to as `chapter-index.rst`, instead of just `i
     - [?] probably won't do this
 
 
-
 ## Visual styling
 
+- Figure out how to include custom stylesheets
 - :any:/:ref: styling
     - Figure out wtf is going on with: 
     
             Sphinx Docs: :any:`sphinx:any`
 
 
-- Figure out how to include custom stylesheets
