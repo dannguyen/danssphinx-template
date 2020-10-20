@@ -1,0 +1,36 @@
+*****************
+Table of contents
+*****************
+
+
+
+Site-wide TOC indexing with :toctree:
+=====================================
+
+https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html
+
+.. code-block:: rst
+
+    .. toctree::
+       :maxdepth: 1
+       :caption: The utilities:
+       :titlesonly:
+
+       moreutils/csvheader
+       moreutils/csvflatten
+       moreutils/csvpivot
+       moreutils/csvsed
+
+
+
+Local/per-page TOC with :contents:
+==================================
+
+https://docutils.sourceforge.io/docs/ref/rst/directives.html#table-of-contents
+
+
+.. code-block:: rst
+
+    .. contents:: Table of Contents
+       :local:
+       :depth: 3

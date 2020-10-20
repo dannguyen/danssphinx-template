@@ -7,6 +7,7 @@ Syntax Examples
    :maxdepth: 3
    :caption: Contents:
 
+   005-toc
    010-tables
    200-images
    500-partials

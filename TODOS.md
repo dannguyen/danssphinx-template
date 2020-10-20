@@ -2,6 +2,7 @@
 
 ## Priority
 
+- [ ] from cookiecutter/pypackage, add Makefile conventions, including `servedocs`
 - [ ] Add/learn some more roles
 
 
