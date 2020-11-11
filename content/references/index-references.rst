@@ -7,3 +7,4 @@ References and resources
 
 
 .. include:: /content/references/official.rstinc
+.. include:: /content/references/live-examples.rstinc

@@ -1,3 +1,11 @@
+# Updates/done
+
+
+2020-11-11
+- added references/live-examples.rstinc
+- started 060-conf/index.rst...rethinking how i should name index files
+
+
 # TODOS
 
 ## Priority

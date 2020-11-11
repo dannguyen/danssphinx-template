@@ -21,6 +21,7 @@ Full table of contents
    /content/000-hello-world/index-hello-world
    /content/001-examples/index
    /content/002-styleguide/index-styleguide
+   /content/060-conf/index
 
 More stuff:
 
