@@ -1,7 +1,7 @@
 
-******************************************
-Dan's Sphinx Template [DansSphinxTemplate]
-******************************************
+*************************************************
+Dan's Sphinx Template [DansSphinxTemplate] v0.0.3
+*************************************************
 
 Because the sphinx-quickstart util is sometimes not specific enough for my needs.
 
@@ -21,6 +21,7 @@ Full table of contents
    /content/000-hello-world/index-hello-world
    /content/001-examples/index
    /content/002-styleguide/index-styleguide
+
    /content/060-conf/index
 
 More stuff:

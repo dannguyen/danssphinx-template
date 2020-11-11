@@ -1,9 +1,0 @@
-************************
-References and resources
-************************
-
-`Official Github page: <https://github.com/sphinx-doc/sphinx>`_
-
-`Official Sphinx docs: <https://www.sphinx-doc.org/en/master/>`_
-
-- `Directives <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html>`_

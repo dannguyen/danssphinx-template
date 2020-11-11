@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Syntax Examples &mdash; Dans Sphinx Template 0.0.2 documentation</title>
+  <title>Working with conf.py &mdash; Dans Sphinx Template 0.0.3 documentation</title>
   
 
   
@@ -20,7 +20,7 @@
   
   
   
-    <link rel="canonical" href="https://dannguyen.github.io/danssphinx-templatecontent/001-examples/index-examples.html"/>
+    <link rel="canonical" href="https://dannguyen.github.io/danssphinx-templatecontent/060-conf/index.html"/>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Tables" href="010-tables.html" />
-    <link rel="prev" title="Hello world" href="../000-hello-world/index-hello-world.html" /> 
+    <link rel="next" title="References and resources" href="../references/index-references.html" />
+    <link rel="prev" title="Commonly used roles" href="../002-styleguide/common-roles.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,13 +86,12 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../000-hello-world/index-hello-world.html">Hello world</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Syntax Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="010-tables.html">Tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="200-images.html">Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="800-plugins.html">Plugins and extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../001-examples/index.html">Syntax Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../002-styleguide/index-styleguide.html">Styleguide and conventions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Working with conf.py</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-setup-function">The setup function</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../002-styleguide/index-styleguide.html">Styleguide and conventions</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../references/index-references.html">References and resources</a></li>
@@ -142,13 +141,13 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Syntax Examples</li>
+      <li>Working with conf.py</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/content/001-examples/index-examples.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/content/060-conf/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -161,31 +160,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="syntax-examples">
-<h1>Syntax Examples<a class="headerlink" href="#syntax-examples" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="010-tables.html">Tables</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="010-tables.html#simple-tables">Simple tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="010-tables.html#grid-table-syntax">Grid Table Syntax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="010-tables.html#sublime-shortcuts-for-osx">Sublime shortcuts for OSX</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="010-tables.html#grid-table-rst-completion">Grid table rst-completion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="010-tables.html#simple-table-rst-completion">Simple table rst-completion</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="010-tables.html#references">References</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="200-images.html">Images</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="200-images.html#basic-image">Basic image</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="800-plugins.html">Plugins and extensions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="800-plugins.html#intersphinx">Intersphinx</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="working-with-conf-py">
+<h1>Working with conf.py<a class="headerlink" href="#working-with-conf-py" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-setup-function">
+<h2>The setup function<a class="headerlink" href="#the-setup-function" title="Permalink to this headline">¶</a></h2>
+<p>Example, taken from jsvine/intro-to-visidata <a class="reference external" href="https://github.com/jsvine/intro-to-visidata/blob/master/docs/conf.py">conf.py</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_stylesheet</span><span class="p">(</span><span class="s1">&#39;https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&#39;</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_stylesheet</span><span class="p">(</span><span class="s1">&#39;css/custom.css&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(ooh custom stylesheets!)</p>
 </div>
 </div>
 
@@ -197,10 +182,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="010-tables.html" class="btn btn-neutral float-right" title="Tables" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../references/index-references.html" class="btn btn-neutral float-right" title="References and resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../000-hello-world/index-hello-world.html" class="btn btn-neutral float-left" title="Hello world" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../002-styleguide/common-roles.html" class="btn btn-neutral float-left" title="Commonly used roles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

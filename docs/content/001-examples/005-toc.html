@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>File and directory naming &mdash; DansSphinxTemplate Notes 0.0.2beta documentation</title>
+  <title>Table of contents &mdash; Dans Sphinx Template 0.0.3 documentation</title>
   
 
   
@@ -16,9 +16,11 @@
 
   
   
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
   
-    <link rel="canonical" href="https://dannguyen.github.io/danssphinx-templatecontent/002-styleguide/file-naming.html"/>
+  
+    <link rel="canonical" href="https://dannguyen.github.io/danssphinx-templatecontent/001-examples/005-toc.html"/>
   
 
   
@@ -38,8 +40,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="References and resources" href="../references/index-references.html" />
-    <link rel="prev" title="Commonly used roles" href="roles.html" /> 
+    <link rel="next" title="Tables" href="010-tables.html" />
+    <link rel="prev" title="Syntax Examples" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -53,7 +55,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> DansSphinxTemplate Notes
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Dans Sphinx Template
           
 
           
@@ -84,12 +86,16 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../000-hello-world/index-hello-world.html">Hello world</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../001-examples/index-examples.html">Syntax Examples</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index-styleguide.html">Styleguide and conventions</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="roles.html">Commonly used roles</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">File and directory naming</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Syntax Examples</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Table of contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="010-tables.html">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200-images.html">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="500-partials.html">Including code files and partial RST content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="800-plugins.html">Plugins and extensions</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../002-styleguide/index-styleguide.html">Styleguide and conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../060-conf/index.html">Working with conf.py</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../references/index-references.html">References and resources</a></li>
@@ -108,7 +114,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">DansSphinxTemplate Notes</a>
+          <a href="../../index.html">Dans Sphinx Template</a>
         
       </nav>
 
@@ -139,15 +145,15 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="index-styleguide.html">Styleguide and conventions</a> &raquo;</li>
+          <li><a href="index.html">Syntax Examples</a> &raquo;</li>
         
-      <li>File and directory naming</li>
+      <li>Table of contents</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/content/002-styleguide/file-naming.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/content/001-examples/005-toc.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -160,13 +166,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="file-and-directory-naming">
-<h1>File and directory naming<a class="headerlink" href="#file-and-directory-naming" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="content">
-<h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
-<p>Main content goes into the <code class="docutils literal notranslate"><span class="pre">./content</span></code> directory</p>
-<p>Each chapter should have its own subdirectory in <code class="docutils literal notranslate"><span class="pre">./content</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">./content/002-arithmetic</span></code></p>
-<p>Each content subdirectory should have its own assets sub directories, e.g. <code class="docutils literal notranslate"><span class="pre">./content/002-arithmetic/images</span></code> and <code class="docutils literal notranslate"><span class="pre">./content/002-arithmetic/code</span></code></p>
+  <div class="section" id="table-of-contents">
+<h1>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="site-wide-toc-indexing-with-toctree">
+<h2>Site-wide TOC indexing with :toctree:<a class="headerlink" href="#site-wide-toc-indexing-with-toctree" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html">https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html</a></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> 1
+   <span class="nc">:caption:</span> The utilities:
+   <span class="nc">:titlesonly:</span>
+
+   moreutils/csvheader
+   moreutils/csvflatten
+   moreutils/csvpivot
+   moreutils/csvsed
+</pre></div>
+</div>
+</div>
+<div class="section" id="local-per-page-toc-with-contents">
+<h2>Local/per-page TOC with :contents:<a class="headerlink" href="#local-per-page-toc-with-contents" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#table-of-contents">https://docutils.sourceforge.io/docs/ref/rst/directives.html#table-of-contents</a></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">contents</span><span class="p">::</span> Table of Contents
+   <span class="nc">:local:</span>
+   <span class="nc">:depth:</span> 3
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -178,10 +202,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../references/index-references.html" class="btn btn-neutral float-right" title="References and resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="010-tables.html" class="btn btn-neutral float-right" title="Tables" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="roles.html" class="btn btn-neutral float-left" title="Commonly used roles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Syntax Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

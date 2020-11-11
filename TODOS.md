@@ -1,10 +1,12 @@
 # Updates/done
 
 
-2020-11-11
+### 2020-11-11 (v0.0.3)
 - added references/live-examples.rstinc
 - started 060-conf/index.rst...rethinking how i should name index files
-
+- revamped Makefile (moved old one to old.Makefile and old.make.bat and old.bake)
+    - singlepage task is left undone for now
+    - make serve runs watchmedo properly
 
 # TODOS
 
